@@ -52,11 +52,11 @@ void gotWeatherData(const char *name, const char *data) {
         float pondarea = 1000; //Surface area of virtual BMP in sq ft (assumes vertical sidewalls)
         float watershedarea = 1; //Area of the watershed draining to the virtual BMP
         float pumpcyclelen = 600; //seconds
-        float pumprate = 2; //pump rate when on in gpm
+        float pumprate = 1.61; //calibrated pump rate when pump is on (gpm)
         
         //VALUE FROM WEBHOOK
         float qpfNum = qpfStr.toFloat(); // note qpfNum is the expected rain in the current 6 hour qpf window
-        qpfNum = 3; //force qpf to be some number for testing - units are in per 6 hours
+        //qpfNum = 1; //force qpf to be some number for testing - units are in per 6 hours (note 8.3 is essentially constant run of pump)
 
         //CONVERSIONS AND CALCULATIONS
         
